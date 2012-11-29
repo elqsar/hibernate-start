@@ -16,8 +16,6 @@
 	
 	<context:property-placeholder location="classpath:/cz/boris/hibernate/database.properties"/>
 	
-	<context:component-scan base-package="cz.boris.hibernate" />
-	
 	<tx:annotation-driven/>
 	<!-- TODO: register transaction manager and session factory -->
 	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">

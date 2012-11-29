@@ -44,8 +44,8 @@ public class HibernateProductRepositoryTest {
 				.createQuery("from Category c where id = :id")
 				.setParameter("id", 1L).uniqueResult());
 		assertNotNull(p.getCategory());
-		p = repository.createNewProduct(p);
-		assertNotNull(p.getId());
+		Long id = repository.createNewProduct(p);
+		assertNotNull(id);
 		Product product = repository.findProductById(p.getId());
 		assertEquals("Candy Milk", product.getName());
 		assertEquals("dairy", p.getCategory().getName());

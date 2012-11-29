@@ -12,7 +12,7 @@ public interface ProductRepository {
 
 	Product findProductById(Long id);
 
-	Product createNewProduct(Product p);
+	Long createNewProduct(Product p);
 
 	void updatePrice(Long id, BigDecimal newPrice);
 

@@ -38,9 +38,9 @@ public class HibernateProductRepository implements ProductRepository {
 	}
 
 	@Transactional(readOnly = false, propagation = Propagation.REQUIRED, isolation = Isolation.READ_COMMITTED)
-	public Product createNewProduct(Product p) {		
-		Product product = (Product) sessionFactory.getCurrentSession().save(p);
-		return product;
+	public Long createNewProduct(Product p) {		
+		Long id = (Long) sessionFactory.getCurrentSession().save(p);
+		return id;
 	}
 
 	@Transactional(readOnly = false, isolation = Isolation.READ_COMMITTED, propagation = Propagation.REQUIRED)
