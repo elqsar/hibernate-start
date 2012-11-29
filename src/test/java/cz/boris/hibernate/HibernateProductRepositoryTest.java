@@ -58,8 +58,7 @@ public class HibernateProductRepositoryTest {
 		assertEquals("cheese", product.getName());
 		filter.setPrice(new BigDecimal(2));
 		filter.setName(null);
-		// TODO: create new embedded database for test so test is ok after
-		// product addition in production
+		// TODO: create new embedded database for test
 		List<Product> products = repository.findProductWithFilter(filter);
 		assertEquals(8, products.size());
 	}
