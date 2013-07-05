@@ -2,4 +2,4 @@ hibernate-start
 ===============
 
 My start with spring and hibernate.
-MySQL database affable bean is used, its from java ee netbeans tutorial.
+MySQL database from java e-commerce netbeans tutorial is used.
